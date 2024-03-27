@@ -1,0 +1,21 @@
+﻿@model Department
+@{
+    Layout = "_Layout1";
+}
+
+
+    <form method="post">
+       
+        <label asp-for="DeptId"></label>
+        <input asp-for="DeptId" readonly />
+       
+        <label asp-for="DeptName"></label>
+        <input asp-for="DeptName" />
+
+        <label asp-for="Capacity"></label>
+        <input asp-for="Capacity" />
+
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a href="/Department/Index" class="btn btn-info">Back</a>
+    </form>
+

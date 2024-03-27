@@ -1,0 +1,466 @@
+﻿/* CSS Document */
+
+/*PAGE LAYOUT*/
+body {
+    margin-left: auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0px;
+    min-width: 800px;
+    max-width: 1000px;
+    text-align: justify;
+    display: table;
+}
+
+    body * {
+        font-family: Tahoma, sans-serif;
+        font-size: 11px;
+    }
+/* Header styles */
+header {
+    background-color: #F0F0F0; /**/
+    height: 97px;
+    margin: 0;
+    padding: 0;
+}
+
+    header * {
+        margin: 0;
+        padding: 0;
+    }
+/* Logo styles */
+figure {
+    float: left;
+    height: 213px;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+}
+
+    figure figcaption {
+        text-align: center;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        top: -152px;
+    }
+/* Address styles */
+header address {
+    float: left;
+    position: relative;
+    margin-top: 1.8em;
+    font-style: normal;
+    font-size: 0.7em;
+}
+
+    header address ul {
+        margin-top: auto;
+    }
+
+        header address ul li {
+            list-style-type: none;
+        }
+
+header nav {
+    width: auto;
+    margin: 5px;
+    margin-top: 0px;
+}
+/* Nav styles */
+nav {
+    width: 100%;
+    text-align: right;
+    background-repeat: repeat-x;
+    vertical-align: text-top;
+    height: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        padding-right: 9px;
+    }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline;
+        }
+
+            nav ul li:before {
+                content: " | ";
+                display: inline;
+            }
+
+    nav li:first-of-type:before {
+        content: "";
+    }
+/* Menu styles */
+#submenu /* Implements: navbardims, paddedtext */ {
+    background-image: url(bg_submenu.gif);
+}
+
+#menu /* Implements: navbardims, smalltext, whitetext, paddedtext */ {
+    background-image: url(bg_menu.gif);
+}
+/* Section styles */
+/* Heading styles */
+h1, h2, h3, figure figcaption, aside dl dt {
+    font-weight: bold;
+}
+
+h1, figure figcaption {
+    font-size: 36px;
+    text-align: center;
+    margin: .25em;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+h3, aside dl dt {
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+/* Article styles */
+article {
+    margin: 12px;
+    display: table;
+}
+/* Aside styles */
+aside {
+    float: left;
+    display: table-cell;
+    text-align: justify;
+    width: 232px;
+    /*GRAY PANEL*/
+    border: solid 1px #666666 /*grey2*/;
+    background-color: #F7F7F7 /*grey4*/;
+    padding: 10px;
+    margin: 10px;
+}
+
+    aside dl dd {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 11px;
+    }
+
+    aside p {
+        margin: 0;
+    }
+/* Footer styles */
+footer {
+    text-align: center;
+    width: auto;
+    clear: both;
+    bottom: 0;
+    background-color: #F0F0F0; /*grey3*/
+}
+
+    footer nav {
+        text-align: center;
+        background-color: #F0F0F0;
+    }
+
+.smalltext,
+/*Implemented by:*/
+nav, a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    .aunderline,
+    /*Implemented by:*/
+    aside a, a:hover {
+        text-decoration: underline;
+    }
+
+.white,
+/*Implemented by:*/
+figure figcaption,
+#menu, #menu a {
+    color: #FFFFFF;
+}
+
+.blue
+/*Implemented by:*/ {
+    color: #010097;
+}
+
+.red,
+/*Implemented by:*/
+h1, h2, h3, aside dl dt {
+    color: #CC0000;
+}
+
+.grey1,
+/*Implemented by:*/
+footer, nav, a {
+    color: #999999;
+}
+
+.grey2,
+/*Implemented by:*/
+p, address {
+    color: #666666;
+}
+
+body *
+{
+  font-family: Tahoma, sans-serif;
+
+  font-size: 11px;
+}
+
+/* Header styles */
+header
+{
+  background-color:#F0F0F0;/**/
+  height:97px;
+  margin:0;
+  padding:0;
+}
+header *
+{
+  margin:0;
+  padding:0;
+}
+
+/* Logo styles */
+figure
+{
+  float:left; 
+  height:213px;
+  margin:0;
+  padding:0;
+  display:table-cell;
+}
+
+figure figcaption
+{
+  text-align:center;
+  position:relative;
+  padding: 0; 
+
+  margin: 0;
+  top:-152px;
+}
+
+/* Address styles */
+header address
+{
+  float:left;
+  position:relative;
+  margin-top:1.8em;
+  font-style:normal;
+  font-size: 0.7em;
+}
+
+header address ul
+{
+  margin-top:auto;
+}
+
+header address ul li
+{
+  list-style-type:none;
+}
+
+
+
+header nav
+{
+  width:auto;
+  margin:5px;
+  margin-top:0px;
+}
+
+/* Nav styles */
+nav
+{
+  
+  width:100%;
+
+  text-align:right;
+  background-repeat:repeat-x;
+  vertical-align:text-top;
+  height:14px;
+  padding-top:9px;
+  padding-bottom:9px;
+
+  
+}
+
+nav ul
+{
+  margin:0;
+  padding:0;
+  padding-right:9px;
+}
+
+nav ul li
+{
+  list-style-type:none;
+  display:inline;
+}
+
+nav ul li:before
+{
+  content:" | ";
+  display:inline;
+}
+
+nav li:first-of-type:before
+{
+  content:"";
+}
+
+/* Menu styles */
+#submenu /* Implements: navbardims, paddedtext */
+{
+  background-image:url(bg_submenu.gif); 
+
+}
+
+#menu /* Implements: navbardims, smalltext, whitetext, paddedtext */
+{
+  background-image:url(bg_menu.gif); 
+}
+
+/* Section styles */
+
+/* Heading styles */
+h1, h2, h3, figure figcaption, aside dl dt
+{
+  font-weight:bold;
+}
+
+h1, figure figcaption
+{
+  font-size: 36px;
+  text-align: center;
+  margin: .25em;
+
+}
+
+h2
+{
+  font-size:20px;
+  margin-top:0;
+}
+
+h3, aside dl dt
+{
+  vertical-align:middle;
+  margin-bottom:0;
+}
+
+/* Article styles */
+article
+{
+  margin:12px;  
+  display:table;
+}
+
+/* Aside styles */
+aside
+{
+  float:left; 
+  display:table-cell;
+  text-align:justify;
+  width:232px;
+  /*GRAY PANEL*/
+  border:solid 1px #666666 /*grey2*/; 
+  background-color:#F7F7F7 /*grey4*/; 
+  padding:10px; 
+  margin:10px;
+}
+
+aside dl dd
+{
+  list-style-type:none;
+  
+  padding:0;
+  margin:0;
+  padding-bottom:11px;
+}
+
+aside p
+{
+  margin:0;
+}
+
+
+
+/* Footer styles */
+footer
+{
+  text-align:center;
+  width:auto; 
+  
+  clear:both;
+  bottom:0;
+  background-color:#F0F0F0;   /*grey3*/
+}
+
+footer nav
+{
+  text-align:center;
+  background-color:#F0F0F0;
+}
+
+.smalltext,
+/*Implemented by:*/ 
+nav, a
+{
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.aunderline, 
+/*Implemented by:*/
+aside a, a:hover
+{
+  text-decoration:underline;
+}
+
+.white, 
+/*Implemented by:*/ 
+figure figcaption, 
+#menu, #menu a 
+{
+  color: #FFFFFF;
+}
+
+.blue
+/*Implemented by:*/
+{
+  color:#010097;
+}
+
+.red,
+/*Implemented by:*/
+h1, h2, h3, aside dl dt
+{
+  color:#CC0000;
+}
+
+.grey1,
+/*Implemented by:*/ 
+footer, nav, a
+{
+  color:#999999;
+}
+
+.grey2,
+/*Implemented by:*/
+p,  address
+{
+  color: #666666;
+}
+

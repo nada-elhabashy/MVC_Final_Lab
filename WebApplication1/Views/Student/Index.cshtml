@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Student>
+@{
+	Layout = "_Layout1";
+}
+
+	<div class="container">
+		<h2>Student List</h2>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Age</th>
+					
+					<th>Department</th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model.Count() == 0)
+				{
+					<tr>
+						<td colspan="4">
+							No Student Found
+						</td>
+					</tr>
+				}
+				else
+				{
+					foreach (var student in Model)
+					{
+						<tr>
+							<td>@student.Id</td>
+							<td>@student.Name</td>
+							<td>@student.Age</td>
+							
+							<td>@student.DepartmentNavigation.DeptName</td>
+							<!--
+							 this will throw exception as we didn't include the department in
+							the query
+							 we have to use include method to include the department in the
+							query
+							 or we can use lazy loading
+							 -->
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+		<a href="/Student/Create" class="btn btn-primary">Create</a>
+	</div>
+

@@ -1,0 +1,33 @@
+﻿@model Department
+@{
+	Layout = "_Layout1";
+}
+
+   
+     <div class="alert alert-info">
+            <h1>@Model.DeptId</h1>
+            <h1>@Model.DeptName</h1>
+            <h1>@Model.Capacity</h1>
+    </div> 
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+            </tr>
+            @foreach (var course in Model.Courses)
+            {
+                <tr>
+                    <td>@course.CrsName</td>
+                    <td>@course.Duration</td>
+                <td>
+                    <a asp-controller="StudentCourses"
+                       asp-action="UpdateStudentDegrees"
+                       asp-route-deptId="@Model.DeptId"
+                       asp-route-crsId="@course.CrsId">add Students degrees</a>
+                </td>
+                </tr>
+
+            }
+
+        </table>
+  

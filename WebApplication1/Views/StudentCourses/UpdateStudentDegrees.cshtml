@@ -1,0 +1,15 @@
+﻿@model Department
+
+@{
+	Layout = "_Layout1";
+}
+
+ <h2>Students</h2>
+ <form method="post">
+	@foreach (var item in Model.Students) {
+		<label> @item.Name </label>
+		<input type="number" name="degrees.@item.Id" />
+
+ }
+ </form>
+

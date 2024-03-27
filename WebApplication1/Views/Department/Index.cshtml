@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Department>
+@{
+	Layout = "_Layout1";
+}
+
+
+	<div class="container">
+		<h2>Department List</h2>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>DeptId</th>
+					<th>DeptName</th>
+					<th>Capacity</th>
+					<th>Details</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model.Count() == 0)
+				{
+					<tr>
+						<td colspan="6">
+							No Department Found
+						</td>
+					</tr>
+				}
+				else
+				{
+					foreach (var dept in Model)
+					{
+						<tr>
+							<td>@dept.DeptId</td>
+							<td>@dept.DeptName</td>
+							<td>@dept.Capacity</td>
+							<td>
+								<a asp-controller="Department"
+								   asp-action="Details"
+								   asp-route-id="@dept.DeptId">Details</a>
+							</td>
+							<td>
+								<a asp-controller="Department"
+								   asp-action="Edit"
+								   asp-route-id="@dept.DeptId">Edit</a>
+							</td>
+							<td>
+								<a asp-controller="Department"
+								   asp-action="Delete"
+								   asp-route-id="@dept.DeptId"
+								   onclick="return confirm('Are you sure you want to delete this department?')">Delete</a>
+							</td>
+							<td>
+								<a asp-controller="DepartmentCourse"
+								   asp-action="ShowCoursesByDept"
+								   asp-route-id="@dept.DeptId">
+								   show courses
+							   </a>
+
+							</td>
+							<td>
+								<a asp-controller="DepartmentCourse"
+								   asp-action="ManageDeptCourses"
+								   asp-route-id="@dept.DeptId">change Department Courses</a>
+							</td>
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+
+		<a href="/Department/Create" class="btn btn-primary">Create</a>
+	</div>
+

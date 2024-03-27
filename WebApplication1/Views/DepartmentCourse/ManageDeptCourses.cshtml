@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = "_Layout1";
+}
+@{
+    Department dept = ViewBag.Dept as Department;
+    List<Course>notInDept = ViewBag.NotInDept as List<Course>;
+    SelectList coursesInDept = new SelectList(dept.Courses, "CrsId","CrsName");
+    SelectList coursesNotInDept = new SelectList(notInDept, "CrsId","CrsName");
+}
+
+    <h2>Add Course</h2>
+    <form method="post">
+        <input type="hidden" name="deptId" value="@dept.DeptId" />
+        <!--
+        multiple attribute to allow selecting multiple courses
+        -->
+        <select name="crsId"
+                multiple
+                name="coursesToRemove"
+                asp-items="coursesInDept"></select>
+        <!--
+        add courses to department
+        -->
+        <select name="crsId"
+                multiple
+                name="coursesToAdd"
+                asp-items="coursesNotInDept"></select>
+        <input type="submit" value="Change" />
+    </form>

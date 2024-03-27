@@ -1,0 +1,39 @@
+﻿@model Student
+
+@{
+	Layout = "_Layout1";
+ var depts = ViewBag.Departments as List<Department>;
+	
+	SelectList deptsList = new SelectList(depts ?? new List<Department>() , "DeptId", "DeptName", 200);
+	
+}
+
+	<form asp-action="Create" method="post">
+		<label asp-for="Id"></label>
+		<input asp-for="Id" />
+		<label asp-for="Name"></label>
+		<input asp-for="Name" />
+		<label asp-for="Age"></label>
+		<input asp-for="Age" />
+	
+		<label asp-for="DeptNo"></label>
+		<!-- <input asp-for="DeptNo" />
+		 we have to restrict the user to select the department from the list of
+		departments to avoid foreign key constraint violation
+		 -->
+		<!-- <select asp-for="DeptNo">
+		<option value="">Select Department</option>
+		@foreach (var dept in depts)
+		{
+			<option value="@dept.DeptId">@dept.DeptName</option>
+		}
+		</select> -->
+		<select asp-for="DeptNo" asp-items="deptsList">
+			<option>Select Department</option>
+			<!--
+			we need to check if the value is not null to avoid exception
+			-->
+		</select>
+		<input type="submit" value="Create" class="btn btn-primary" />
+		<a href="/Student/Index" class="btn btn-info">Back</a>
+	</form>

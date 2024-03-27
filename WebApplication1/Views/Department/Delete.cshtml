@@ -1,0 +1,11 @@
+﻿@model Department
+@{
+    Layout = "_Layout1";
+}
+
+    <form asp-action="Delete" method="post">
+        <input asp-for="DeptId" type="hidden" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a href="/Department/Index" class="btn btn-info">Back</a>
+    </form>
+
